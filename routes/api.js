@@ -11,12 +11,12 @@ module.exports = function (app) {
       let text = req.body.text
       let locale = req.body.locale
       console.log(text)
-      if (!text || !locale) {
+      if (!locale) {
         res.json({error: 'Required field(s) missing'});
         return
       }
 
-      if (text.trim()=='') {
+      if (!text || text.trim()=='') {
         res.json({error: 'No text to translate'});
         return
       }
