@@ -222,5 +222,6 @@ suite('Unit Tests', () => {
         let output = translator.translate(input,translation,true);
         assert.equal(output,expectedOutput,'translated output not match');
         done();
+
     })
 });
