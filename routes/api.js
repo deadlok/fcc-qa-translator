@@ -10,7 +10,7 @@ module.exports = function (app) {
     .post((req, res) => {
       let text = req.body.text
       let locale = req.body.locale
-      console.log('text')
+      console.log(text)
       if (!text || !locale) {
         res.json({error: 'Required field(s) missing'});
         return
