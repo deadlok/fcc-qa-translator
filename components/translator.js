@@ -35,8 +35,7 @@ class Translator {
                 preReplace = '$1'
             } else {
                 preSearch = ''
-                preReplace = ''
-                
+                preReplace = ''  
             }
 
             let regExp = new RegExp(preSearch +phraseArr[0]+ postSearch,'gi')
@@ -49,7 +48,7 @@ class Translator {
 
             result = result.replaceAll(regExp, preReplace + replaceStr + postReplace);
         })
-        console.log(result);
+        //console.log(result);
         return result;
     }
     

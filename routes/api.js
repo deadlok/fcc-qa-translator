@@ -10,7 +10,7 @@ module.exports = function (app) {
     .post((req, res) => {
       let text = req.body.text
       let locale = req.body.locale
-      console.log('"' + text + '"')
+      //console.log('"' + text + '"')
       
       if (text === undefined || !locale) {
         res.json({error: 'Required field(s) missing'});
@@ -24,6 +24,7 @@ module.exports = function (app) {
 
       if (locale != 'american-to-british' && locale != 'british-to-american') {
         res.json({error: 'Invalid value for locale field'});
+        return
       }
 
 
