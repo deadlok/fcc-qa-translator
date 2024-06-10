@@ -12,7 +12,7 @@ module.exports = function (app) {
       let locale = req.body.locale
       console.log('"' + text + '"')
       
-      if (!text || !locale) {
+      if (text === undefined || !locale) {
         res.json({error: 'Required field(s) missing'});
         return
       }
