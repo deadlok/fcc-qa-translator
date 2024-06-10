@@ -17,7 +17,7 @@ module.exports = function (app) {
         return
       }
 
-      if (typeof text === "string" && text.length === 0) {
+      if (typeof text === "string" && text.trim().length === 0) {
         res.json({error: 'No text to translate'});
         return
       }
